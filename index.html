@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body>
+<div class="wrapper">
+  <div class="nav">
+    <img src="./assets/images/logo.svg" alt="">
+    <div class="rightSide">     
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+      </label>
+    </div>      
+    <img id="modeImg" src="./assets/images/icon-moon.svg" alt="">
+    </div>
+  </div>
+
+
+  <div class="search">
+    <input id="word" size="40" type="text" placeholder="Enter word">
+    <img id="searchBtn" src="./assets/images/icon-search.svg" alt="">
+  </div>
+
+  <div class="wordHeading">
+    <div class="content"> 
+      <h1 id="wordFinal"></h1>
+      <h3 id="jibberish"></h3>
+    </div>
+    <div class="playBtn">
+      <audio id="playAudio"><source id="link" src=""></audio>
+      <img id="audio" src="./assets/images/icon-play.svg" alt="">
+    </div>
+  </div>
+
+  <div id="noun-section" class="">
+
+ 
+  <div class="nounHeading">
+    <div class="nounText">
+      <h2>noun</h2>
+    </div>
+    <div class="hr">
+
+      <hr>
+    </div>
+  </div>
+  <h4 class="meaning">Meaning</h4>
+  
+  <div id="nounArea" class="nounDefinitions">
+
+    
+  </div>
+  <div class="group">
+    <h4>Synonyms</h4>
+    <h4 id="synonyms" class="synonymWord"></h4>
+  </div>
+</div>
+
+<div id="verb-section" class="verb-section">
+  <div class="verb verbHeading">
+    <div class="verbText">
+      <h2>verb</h2>
+    </div>
+    <div class="hr">
+
+      <hr>
+    </div>
+
+  </div>
+  <h4 class="verb meaning">Meaning</h4>
+
+  <div id="verbArea" class="verb verbDefinitions">
+    <!-- <ul>
+      <li id="verbOne"></li>
+    </ul> -->
+  </div>
+</div>
+  <hr class="bottomHr">
+  <div class="source">
+    <h3>Source</h3>
+    <p><a id="source" href="#"></a></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
