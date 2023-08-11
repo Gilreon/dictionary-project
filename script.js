@@ -39,15 +39,6 @@ const displayData = (data) => {
   verbDefinition.innerHTML = "";
   synonyms.innerHTML = "No synonyms available.";
 
-  n.src =
-    data[0].phonetics[0].audio ||
-    data[0].phonetics[1].audio ||
-    data[0].phonetics[2].audio ||
-    data[0].phonetics[3].audio ||
-    data[0].phonetics[4].audio ||
-    data[0].phonetics[5].audio ||
-    data[0].phonetics[6].audio;
-
   const meanings = data[0].meanings[0].definitions;
   for (let i = 0; i < 4; i++) {
     const listItem = document.createElement("li");
@@ -57,7 +48,6 @@ const displayData = (data) => {
     bulletList.appendChild(listItem);
 
     nounDefinition.appendChild(bulletList);
-    // console.log();
   }
 
   const verbMeanings = data[0].meanings[1].definitions[0].definition;
@@ -78,6 +68,8 @@ const displayData = (data) => {
     synonyms.textContent = synonymText;
   } else {
   }
+
+  n.src = data[0].phonetics.find((phonetic) => phonetic.audio)?.audio;
 };
 
 slider.addEventListener("click", myFunction);
