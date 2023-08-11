@@ -9,7 +9,6 @@ const nounDefinition = document.getElementById("nounArea");
 const verbDefinition = document.getElementById("verbArea");
 
 const synonyms = document.getElementById("synonyms");
-// const verbDefinition = document.getElementById("verbOne");
 const source = document.getElementById("source");
 
 let x = document.getElementById("noun-section");
@@ -27,9 +26,7 @@ async function searchFunction() {
     const response = await fetch(url);
     const data = await response.json();
     displayData(data);
-  } catch (error) {
-    // console.log("no verb");
-  }
+  } catch (error) {}
 }
 
 const displayData = (data) => {
@@ -60,6 +57,7 @@ const displayData = (data) => {
     bulletList.appendChild(listItem);
 
     nounDefinition.appendChild(bulletList);
+    // console.log();
   }
 
   const verbMeanings = data[0].meanings[1].definitions[0].definition;
@@ -79,7 +77,6 @@ const displayData = (data) => {
     const synonymText = synonymList.join(", ");
     synonyms.textContent = synonymText;
   } else {
-    // synonyms.textContent = "No synonyms available.";
   }
 };
 

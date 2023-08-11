@@ -10,6 +10,7 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    margin: 0 1.5rem;
 }
 
 .rightSide {
@@ -98,6 +99,7 @@ margin-top: 1.2rem;
 .search input {
     border-radius: 2rem;
     height: 1.5rem;
+    width: 20rem;
     border: 1px solid gray;
     padding-left: 1.5rem;
     outline: none;
@@ -127,10 +129,12 @@ margin-top: 1.2rem;
 
 .playBtn {
     margin: 2rem;
+    /* cursor: pointer; */
 }
 
 .playBtn img {
     width: 2.5rem;
+    cursor: pointer;
 }
 
 /* end of word section */
@@ -219,3 +223,55 @@ color:#757575;
     color:#757575;
 }
 
+/* Media Queries */
+
+@media (min-width: 1000px) {
+
+    .wrapper {
+        margin: 0 17vw;
+    }
+
+    .bottomHr {
+        width: 65vw;
+        color:#757575;
+        
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2,h3 {
+            font-size: 1.6rem;
+        }
+
+        p, ul {
+            font-size: 1.5rem;
+        }
+
+            .search {
+            margin-top: 1.8rem;
+            
+            }
+            
+            .search img {
+                position: absolute;
+                align-self: center;
+                margin-left: 36rem;
+                width: 1.4rem;    
+                cursor: pointer;
+            }
+            
+            .search input {
+                height: 3rem;
+                width: 40rem;
+                padding-left: 2rem;
+                font-size: 1.4rem;
+            }
+
+            .playBtn img {
+                width: 3.5rem;
+            }
+            
+}
+  
