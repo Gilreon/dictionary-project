@@ -30,7 +30,6 @@ async function searchFunction() {
 }
 
 const displayData = (data) => {
-  console.log(data);
   source.innerHTML = data[0].sourceUrls[0];
   wordSeen.innerHTML = data[0].word;
   jibberishSeen.innerHTML = data[0].phonetic || data[0].phonetics[1].text;
